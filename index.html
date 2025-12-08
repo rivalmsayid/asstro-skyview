@@ -383,8 +383,8 @@
       <h1 class="hero-title">Grand Opening — Asstro Heritage</h1>
       <div class="hero-sub">
       Kepada Yth:<br>
-      <strong id="guestName" style="font-size:22px;">Tamu Undangan</strong>
-      <div id="guestInfo" style="margin-top:4px;font-size:15px;opacity:.85;font-style:italic;"></div>
+     <strong id="guestName">Tamu Undangan</strong>
+      <div id="guestInfo"></div>
 
   <span>
     Kami dengan hangat mengundang Anda menghadiri peresmian Asstro Heritage — destinasi baru untuk pengalaman alam, rekreasi, dan kuliner.
@@ -527,25 +527,19 @@
 
   <script>
     
-
-   // ====== Ambil Nama & Jabatan dari URL ======
-  (function(){
+(function(){
     const params = new URLSearchParams(window.location.search);
     const name = params.get('to');
-    const jabatan = params.get('jabatan');
+    const info = params.get('info');
 
     if(name){
-      const target = document.getElementById('guestName');
-      if(target){
-        target.textContent = decodeURIComponent(name.replace(/\+/g,' '));
-      }
+      const elName = document.getElementById('guestName');
+      if(elName) elName.textContent = decodeURIComponent(name.replace(/\+/g,' '));
     }
 
-    if(jabatan){
-      const targetJabatan = document.getElementById('guestTitle');
-      if(targetJabatan){
-        targetJabatan.textContent = decodeURIComponent(jabatan.replace(/\+/g,' '));
-      }
+    if(info){
+      const elInfo = document.getElementById('guestInfo');
+      if(elInfo) elInfo.textContent = decodeURIComponent(info.replace(/\+/g,' '));
     }
   })();
 
