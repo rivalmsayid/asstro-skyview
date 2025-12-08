@@ -58,8 +58,8 @@
       color:#fff;
     }
     .logo{
-      width:140px;
-      max-width:30%;
+      width:300px;
+      max-width:60%;
       display:block;
       margin:0 auto 14px;
       filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
@@ -269,6 +269,66 @@
       .cd-val{ font-size:18px; }
       .gallery img{ height:140px; }
     }
+    /* Detail Section */
+.detail-card {
+  padding: 40px 30px;
+  border-radius: 20px;
+}
+
+.detail-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 16px 20px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 310px;
+}
+
+.detail-item strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.detail-item small {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.detail-icon {
+  font-size: 1.7rem;
+  background: rgba(255,255,255,0.7);
+  padding: 10px;
+  border-radius: 12px;
+  min-width: 48px;
+  text-align: center;
+}
+
+/* Agenda */
+.agenda {
+  text-align: center;
+  margin-top: 26px;
+}
+
+.agenda p {
+  color: var(--muted);
+  margin-top: 8px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
   </style>
 </head>
 <body>
@@ -276,9 +336,13 @@
   <!-- HERO -->
   <header class="hero" role="banner" aria-label="Hero Asstro Heritage">
     <div class="hero-inner">
-      <img src="assets/asstro-heritage.png" alt="Asstro Heritage Logo" class="logo" />
+      <img src="assets/Asstro heritage w.png" alt="Asstro Heritage Logo" class="logo" />
       <h1 class="hero-title">Grand Opening — Asstro Heritage</h1>
-      <p class="hero-sub">Kami dengan hangat mengundang Anda menghadiri peresmian Asstro Heritage — destinasi baru untuk pengalaman alam, rekreasi, dan kuliner.</p>
+      <p class="hero-sub">
+        Kepada Yth:<br>
+        <strong id="guestName" style="font-size:22px;">Tamu Undangan</strong><br><br>
+        Kami dengan hangat mengundang Anda menghadiri peresmian Asstro Heritage — destinasi baru untuk pengalaman alam, rekreasi, dan kuliner.
+      </p>
 
       <div class="hero-pills" aria-hidden="false">
         <div class="pill">Jum'at, 12 Desember 2025</div>
@@ -316,31 +380,66 @@
       <p class="lead-center">Dengan penuh rasa syukur, kami menyampaikan undangan kepada Anda untuk hadir dalam Grand Opening Asstro Heritage Laswi. Hadir dengan suasana alam yang sejuk dan konsep kuliner yang elegan, Asstro Heritage dirancang untuk memberikan kenyamanan, kehangatan, serta pengalaman bersantap yang berkesan. Kehadiran Anda akan menjadi kehormatan bagi kami.</p>
     </section>
 
-    <!-- Detail Acara -->
-    <section class="card" id="detail" aria-labelledby="detail-title">
-      <h2 id="detail-title">Detail Acara</h2>
-      <div class="grid-3" role="list">
-        <div class="meta" role="listitem">
-          <strong>Tanggal & Waktu</strong>
-          <small>Jum'at, 12 Desember 2025 — 14:00 WIB</small>
-        </div>
-        <div class="meta" role="listitem">
-          <strong>Lokasi</strong>
-          <small>Highland Ciater, Subang — Jawa Barat</small>
-        </div>
-        <div class="meta" role="listitem">
-          <strong>Dresscode</strong>
-          <small>Smart Casual (outdoor friendly)</small>
-        </div>
-      </div>
+   <!-- Detail Acara -->
+<section class="card detail-card" id="detail" aria-labelledby="detail-title">
+  <h2 id="detail-title">Detail Acara</h2>
 
-      <div style="margin-top:18px; text-align:center;">
-        <strong>Agenda Singkat</strong>
-        <p style="color:var(--muted); max-width:820px; margin:8px auto 0;">
-          14:00 — Pembukaan & sambutan • 14:30 — Tour area & photoshoot • 15:30 — Light refreshments & networking
-        </p>
+  <div class="detail-grid">
+    <div class="detail-item">
+      <div class="detail-icon">
+        <span>📅</span>
       </div>
-    </section>
+      <div>
+        <strong>Tanggal & Waktu</strong>
+        <small>Jum'at, 12 Desember 2025 — 14:00 WIB</small>
+      </div>
+    </div>
+
+    <div class="detail-item">
+      <div class="detail-icon">
+        <span>📍</span>
+      </div>
+      <div>
+        <strong>Lokasi</strong>
+        <small>Highland Ciater, Subang — Jawa Barat</small>
+      </div>
+    </div>
+
+    <div class="detail-item">
+      <div class="detail-icon">
+        <span>👕</span>
+      </div>
+      <div>
+        <strong>Dresscode</strong>
+        <small>Smart Casual (outdoor friendly)</small>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:18px; text-align:center;">
+  <strong>Agenda Singkat</strong>
+  <ul style="
+    color:var(--muted); 
+    max-width:820px; 
+    margin:12px auto 0; 
+    list-style:none; 
+    padding:0;
+    text-align:center;
+    line-height:1.6;
+  ">
+    <li>Pembukaan — 14:00 WIB</li>
+    <li>Pembacaan Ayat Suci Al-Qur’an</li>
+    <li>Sambutan</li>
+    <li>Santunan Anak Yatim Piatu</li>
+    <li>Tausiyah & Doa</li>
+    <li>Gunting Pita</li>
+    <li>Tour Area</li>
+    <li>Ceremonial Potong Tumpeng</li>
+    <li>Ramah Tamah</li>
+    <li>Hiburan (Band Titanium)</li>
+  </ul>
+</div>
+</section>
 
     <!-- Galeri -->
     <section class="card" id="gallery" aria-labelledby="gallery-title">
@@ -352,25 +451,6 @@
       </div>
     </section>
 
-    <!-- RSVP -->
-    <section class="card" id="rsvp" aria-labelledby="rsvp-title">
-      <h2 id="rsvp-title">Konfirmasi Kehadiran (RSVP)</h2>
-      <p class="lead-center">Isi data berikut untuk konfirmasi kehadiran. Data tersimpan secara lokal di browser (localStorage).</p>
-
-      <div class="rsvp-wrap" role="form" aria-labelledby="rsvp-title">
-        <form id="rsvpForm" class="rsvp" autocomplete="on" novalidate>
-          <input id="r-name" name="name" type="text" placeholder="Nama lengkap" required>
-          <input id="r-phone" name="phone" type="tel" placeholder="No. WhatsApp (contoh: 0812xxxx)" required>
-          <select id="r-attend" name="attend" required>
-            <option value="Hadir">Hadir</option>
-            <option value="Berhalangan">Berhalangan</option>
-          </select>
-          <textarea id="r-note" name="note" rows="3" placeholder="Catatan tambahan (opsional)"></textarea>
-          <button type="submit" aria-live="polite">Kirim Konfirmasi</button>
-        </form>
-        <p id="rsvpMsg" style="text-align:center; margin-top:10px; color:var(--muted)"></p>
-      </div>
-    </section>
 
     <!-- Map & Contact -->
     <section class="card" id="contact" aria-labelledby="contact-title">
@@ -402,6 +482,21 @@
   <audio id="bgm" src="assets/ceremony.mp3" loop preload="auto"></audio>
 
   <script>
+
+    // ====== Ambil Nama Tamu dari URL ======
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get('to');
+
+      if(name){
+        const target = document.getElementById('guestName');
+        if(target){
+          target.textContent = decodeURIComponent(name.replace(/\+/g,' '));
+        }
+      }
+    })();
+
+
     // ====== Countdown to 12 Dec 2025 14:00 WIB (+07:00) ======
     (function(){
       const target = new Date("2025-12-12T14:00:00+07:00").getTime();
