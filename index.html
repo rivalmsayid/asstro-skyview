@@ -258,11 +258,36 @@
 
     /* gallery */
 /* Gallery Center */
-.gallery-single{
-  display:flex;
-  justify-content:center;
-  align-items:center;
+/* ===== GALLERY GRID ===== */
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px; /* 🔥 jarak antar foto */
+  margin-top: 24px;
 }
+
+.gallery-grid img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Hover elegan */
+.gallery-grid img:hover{
+  transform: scale(1.03);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+
+/* Mobile */
+@media (max-width: 600px){
+  .gallery-grid img{
+    height: 160px;
+  }
+}
+
 
 .gallery-single img{
   width:100%;
@@ -555,16 +580,13 @@
 <section class="card" id="gallery" aria-labelledby="gallery-title">
   <h2 id="gallery-title">Galeri</h2>
 
-  <div class="gallery-single">
-    <img src="assets/Asstro-Punclut-1.png" alt="Galeri Asstro Skyview Punclut">
-  </div>
-  <div class="gallery-single">
-    <img src="assets/Asstro-Punclut-2.png" alt="Galeri Asstro Skyview Punclut">
-  </div>
-  <div class="gallery-single">
-    <img src="assets/Asstro-Punclut-1.png" alt="Galeri Asstro Skyview Punclut">
+  <div class="gallery-grid">
+    <img src="assets/Asstro-Punclut-1.png" alt="Asstro Skyview Punclut">
+    <img src="assets/Asstro-Punclut-2.png" alt="Asstro Skyview Punclut">
+    <img src="assets/asstro-punclut-3.jpeg" alt="Asstro Skyview Punclut">
   </div>
 </section>
+
 
 
 
